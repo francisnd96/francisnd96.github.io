@@ -46,6 +46,15 @@
             <li> 		Distributed key-value store (etcd)</li>
         </ul>
             </p>
+            <h3>Master Node</h3>
+            <p>The Master Node manages the whole Kubernetes cluster acting as the main control point for the cluster state and management. For high availability, there can be multiple master nodes, but for administrative tasks, only one will act as a leader.</p>
+            <p>Each master node will have:
+            <ul>
+            <li> 		Controller - manage the cluster and make sure current state is matched with the desired state of an application</li>
+            <li> 		API Server — all administrative tasks for the cluster is done through this API server. All CLI, API and dashboard commands are directed to this API server where it will validate the request and execute them</li>
+            <li> 		Scheduler — schedules the work for different worker nodes. Scheduler knows about the currently running applications on each node and knows about the constraints on each worker node. Based on this information, the scheduler assigns the worker node for a deployment/service.</li>
+        </ul>
+            </p>
         </div>
     </div>
     <div class="footer"><p class="copyright">© 2018-2020 Francis Nana-Dabankah. All rights reserved.</p></div>
