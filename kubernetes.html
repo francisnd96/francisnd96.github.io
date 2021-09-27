@@ -61,6 +61,15 @@
             <li> 		Scheduler — schedules the work for different worker nodes. Scheduler knows about the currently running applications on each node and knows about the constraints on each worker node. Based on this information, the scheduler assigns the worker node for a deployment/service.</li>
         </ul>
             </p>
+            <h3>Worker Node</h3>
+            <p>A worker node is any machine within the cluster that runs pods with containers. All the worker nodes are controlled by the master node. To access the application we need to connect to the worker nodes</p>
+            <p>Each worker node contains:
+            <ul>
+            <li> 		kube-proxy — network proxy which runs on each worker node and listens to the API server for each endpoint creation or deletion. Kube-proxy creates routes for each endpoint hence kube-proxy is the component that enables communication to worker nodes from within the cluster or from outside.</li>
+            <li> 		kubelet — agent which runs on every worker node which communicates with the master node. It has the responsibility of executing pod execution commands and make sure that pods are always healthy.</li>
+            <li> 		Container Runtime — manage the container lifecycle on the worker node. Kubernetes supports many container runtimes such as Docker, containerd etc..</li>
+        </ul>
+            </p>
         </div>
     </div>
     <div class="footer"><p class="copyright">© 2018-2020 Francis Nana-Dabankah. All rights reserved.</p></div>
