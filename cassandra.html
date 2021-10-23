@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="container content">
+    <div class="masthead"><h3 class="masthead-title"><a href="index.html" title="Home">Francis Nana-Dabankah</a><span
+            class="top-nav nav-bar"><span class="top-nav-item"><a href="about.html" title="About">About</a></span> <span
+            class="top-nav-item"><a href="projects.html" title="Projects">Projects</a></span> <span class="top-nav-item"><a
+            href="contact.html" title="Contact">Contact</a></span> <span class="top-nav-item"><a
+            href="blog.html" title="Blog">Blog</a></span> <span class="top-nav-item"><a href="more.html"
+                                                                                        title="More">More</a></span></span>
+    </h3></div>
+    <nav id="breadcrumb-nav" class="nav-bar"><span class="csu-breadcrumb"><a href="index.html">Home</a></span>
+        <ol class="csu-breadcrumbs" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <li class="csu-breadcrumb active" property="itemListElement" typeof="ListItem"><a property="item"
+                                                                                              typeof="WebPage"
+                                                                                              href="java.html"><span
+                    property="name">Java</span></a>
+                <meta property="position" content="1">
+            </li>
+        </ol>
+    </nav>
+    <div class="page">
+        <div class="page-header"><h1 class="page-title"> Java 17 (LTS)</h1></div>
+        <div class="page-content">
+            <h3>Cluster Topology and Design</h3>
+            <p>
+                <ul>
+            <li>A single Cassandra instance is called a node </li>
+            <li>Cassandra supports horizontal scalability achieved by adding more that one node as part of a cassandra cluster</li>
+            <li>Cassandra works with peer to peer to architecture with each node connected to all other nodes</li>
+            <li>Each Cassandra node performs all database operations and can serve client requests without a need for a master node</li>
+            <li>Nodes in a cluster communicate with each other via Seeds and Gossip</li>
+            <li>Seeds - Each node configures a list of seeds which is simply a list of other nodes. A seed node is used to bootstrap a node when it is first joining a cluster</li>
+            <li>Gossip - Gossip is the protocol used by Cassandra nodes for peer-to-peer communication. The gossip
+            informs a node about the state of all other nodes</li>
+        </ul>
+            </p>
+        </div>
+    </div>
+    <div class="footer"><p class="copyright">© 2018-2020 Francis Nana-Dabankah. All rights reserved.</p></div>
+</div>
+</body>
+
+
+</html>
