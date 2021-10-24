@@ -45,9 +45,25 @@
             <ul>
                 <li>Cassandra stores data in tables where each table is organised in rows and columns the same as any
                 other database</li>
-                <li>Tables are grouped in keyspaces. A keyspace could be used to group tables servibg a similar purpose from
+                <li>Tables are grouped in keyspaces. A keyspace could be used to group tables serving a similar purpose from
                 a business perspective like all transactional tables, metadata tables, use information tables</li>
+                <li>Each table has a defined primary key. The primary key is divided into partition key and clustering columns</li>
+                <li>The partition key is used by Cassandra to index the data. All rows which share a common partition key make a
+                single data partition which is the basic unit of data partitioning, storage and retrieval in Cassandra</li>
             </ul>
+            </p>
+            </p>
+            <h3>Partitioning</h3>
+            <p>
+            <ul>
+            <li>A partition key is converted to a token by a partitioner</li>
+            <li>The tokens are signed integer values between -2^63 to 2^63-1 and this range is referred to as token
+            range</li>
+            <li>Each Cassandra node owns a portion of this range and it primarily owns data corresponding to the range
+            A token is used to prescisly locate the data among the nodes and on the data storage of the corresponding node</li>
+            <li>Here is a simplified example to illustrate token range assignment. If we consider there are only 100 tokens used for a
+            Cassandra cluster with three nodes. Each node is assigned approximately 33 tokens like ----- node1: 0-33 ----- node2: 34-66 ----- node3: 67-99</li>
+        </ul>
             </p>
         </div>
     </div>
